@@ -1,0 +1,42 @@
+<!--<html>
+<head>
+  <script>
+    function Validate(){
+       let id = document.forms["myForm"][id].value;
+       let name = document.forms["myForm"]["name"].value;
+
+      if(id.length<1||id.length>100)
+      {
+        alert("Please input valid Id");
+        return false;
+      }else if(name==null||name==""){
+        alert("Name can't be blank");
+        return false;
+      }
+
+    }
+  </script>
+</head>
+</html>-->
+
+
+<div class="col-md-6 offset-md-3">
+  <h3> Create Customer </h3>
+  <form (ngSubmit) = "onSubmit()">
+    <div class="form-group">
+      <label> Customer Id</label>
+      <input type="text" class ="form-control" id = "id"
+             [(ngModel)] = "customer.id" name = "id">
+     <!-- <input type="submit" value="Submit">-->
+    </div>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class ="form-control" id = "name"
+             [(ngModel)] = "customer.name" name = "name">
+      <!--<input type="submit" value="Submit">-->
+    </div>
+
+    <button class = "btn btn-success" type ="submit">Submit</button>
+  </form>
+</div>

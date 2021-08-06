@@ -1,0 +1,32 @@
+<div class="col-md-6 offset-md-3">
+  <h3> Search Customer </h3>
+  <form>
+
+    <div class="form-group">
+      <label> Customer Id</label>
+      <input type="text" class ="form-control" id = "id1"
+             name="id1" #id1>
+      <button type="button" (click)="onSubmit(id1.value)">search</button>
+
+    </div>
+  </form>
+  <p *ngIf="customer.name==null" >No search record found</p>
+  <!--<ng-template myelseblock>record found</ng-template>-->
+  <hr>
+
+  <h2> Customer </h2>
+  <table class = "table table-striped">
+    <thead>
+    <tr>
+      <th> Id</th>
+      <th> Name</th>
+    </tr>
+    <tr>
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+    </tr>
+    </thead>
+  </table>
+</div>
+
+
